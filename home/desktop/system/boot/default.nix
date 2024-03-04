@@ -1,6 +1,6 @@
 _: {
   imports = [
-    # ./efi
-    ./bios
+    ./efi
+    # ./bios
   ];
 }

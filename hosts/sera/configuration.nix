@@ -104,9 +104,9 @@
 
   users = {
     users = {
-      redyf = {
+      sera = {
         isNormalUser = true;
-        description = "redyf";
+        description = "sera";
         initialPassword = "123456";
         shell = pkgs.zsh;
         extraGroups = ["networkmanager" "wheel" "input" "docker" "kvm" "libvirtd"];
@@ -123,7 +123,7 @@
       enable = true;
       extraRules = [
         {
-          users = ["redyf"];
+          users = ["sera"];
           keepEnv = true;
           persist = true;
         }

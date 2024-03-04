@@ -4,7 +4,7 @@
   				# info title
   				# info underline
   				prin ""
-  				prin "$(color 1)R E D Y F"
+  				prin "$(color 1)S E R A"
   			#	prin _____________________
   				info "" distro
   			#	info "" model
@@ -20,7 +20,7 @@
   			#  prin "" "Hyprland"
   			# info "" locale
   			# info "" uptime
-  				prin "" "github.com/Redyf"
+  				prin "" "github.com/icefishii"
 
 
   			# info "GPU Driver" gpu_driver  # Linux/macOS only

@@ -1,5 +1,5 @@
 {
-  description = "Redyf's Flake";
+  description = "sera's Flake";
 
   inputs = {
     # Core
@@ -70,7 +70,7 @@
     nixpkgsFor = forAllSystems (system: import nixpkgs {inherit system;});
   in {
     nixosConfigurations = {
-      redyf =
+      sera =
         nixpkgs.lib.nixosSystem
         {
           system = "x86_64-linux";
@@ -83,14 +83,14 @@
               ;
           };
           modules = [
-            ./hosts/redyf/configuration.nix
+            ./hosts/sera/configuration.nix
             home-manager.nixosModules.home-manager
             {
               home-manager = {
                 useUserPackages = true;
                 useGlobalPkgs = false;
                 extraSpecialArgs = {inherit inputs spicetify-nix disko;};
-                users.redyf = ./home/desktop/home.nix;
+                users.sera = ./home/desktop/home.nix;
               };
             }
             hyprland.nixosModules.default

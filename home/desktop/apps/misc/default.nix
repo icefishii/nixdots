@@ -18,8 +18,8 @@
     zathura # PDF viewer
 
     # Anime/Manga
-    # ani-cli # A cli tool to browse and play anime
-    # mangal # A fancy CLI app written in Go which scrapes, downloads and packs manga into different formats
+    ani-cli # A cli tool to browse and play anime
+    mangal # A fancy CLI app written in Go which scrapes, downloads and packs manga into different formats
 
     # Rice
     dunst # Notifications for your system

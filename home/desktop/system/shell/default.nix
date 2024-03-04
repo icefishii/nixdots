@@ -19,7 +19,7 @@ in {
       grep = "grep --color=auto";
       mv = "mv -i";
       rip = "rip -i";
-      rebuild = "cd ~/nixdots && doas nixos-rebuild switch --flake .#redyf";
+      rebuild = "cd ~/nixdots && doas nixos-rebuild switch --flake .#sera";
       g = "git";
       ga = "git add";
       gaa = "git add .";
@@ -54,15 +54,15 @@ in {
         export PATH="$HOME/.emacs.d/bin:$PATH"
         export PATH="$PATH:/run/current-system/sw/bin/jdtls"
         export PATH="$PATH:/run/current-system/sw/bin/jdt-language-server"
-        export PATH="$PATH:/etc/profiles/per-user/redyf/bin/flutter"
-        export PATH="$PATH:/home/redyf/Android/Sdk"
-        export PATH="$PATH:/home/redyf/Android/Sdk/platform-tools/"
-        export PATH="$PATH:/home/redyf/Android/Sdk/cmdline-tools/latest/bin"
-        export PATH="$PATH:/home/redyf/.nix-profile/bin/swww"
-        export PATH="$PATH:/home/redyf/.nix-profile/bin/swww-daemon"
+        export PATH="$PATH:/etc/profiles/per-user/sera/bin/flutter"
+        export PATH="$PATH:/home/sera/Android/Sdk"
+        export PATH="$PATH:/home/sera/Android/Sdk/platform-tools/"
+        export PATH="$PATH:/home/sera/Android/Sdk/cmdline-tools/latest/bin"
+        export PATH="$PATH:/home/sera/.nix-profile/bin/swww"
+        export PATH="$PATH:/home/sera/.nix-profile/bin/swww-daemon"
         bindkey -s ^f "tmux-sessionizer\n"
         export PATH="$PATH:$FORGIT_INSTALL_DIR/bin"
-        export PATH="$PATH:/home/redyf/.config/nvim/bin"
+        export PATH="$PATH:/home/sera/.config/nvim/bin"
         export WINIT_UNIX_BACKEND=x11 neovide
 
         # Autosuggest
@@ -162,7 +162,7 @@ in {
         grep = "grep --color=auto";
         mv = "mv -i";
         rip = "rip -i";
-        rebuild = "cd ~/nixdots && doas nixos-rebuild switch --flake .#redyf";
+        rebuild = "cd ~/nixdots && doas nixos-rebuild switch --flake .#sera";
         postman = "postman --use-gl=desktop";
         insomnia = "insomnia --use-gl=desktop";
         beekeeper-studio = "beekeeper-studio --use-gl=desktop";

@@ -21,13 +21,13 @@ in {
     hardware = {
       audio = enabled;
       networking = enabled;
-      nvidia = enabled;
+      nvidia = disabled;
     };
 
     system = {
       boot = {
-        bios = enabled;
-        efi = disabled;
+        bios = disabled;
+        efi = enabled;
       };
       fonts = enabled;
       locale = enabled;
