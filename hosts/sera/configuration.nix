@@ -224,16 +224,16 @@
     };
   };
 
-  suites = {
-    common = enabled;
-    desktop = enabled;
-    development = enabled;
-    music = enabled;
-    video = enabled;
-    social = enabled;
-    gaming = disabled;
-    rice = enabled;
-  };
+  #suites = {
+  #  common = enabled;
+  #  desktop = enabled;
+  #  development = enabled;
+  #  music = enabled;
+  #  video = enabled;
+  #  social = enabled;
+  #  gaming = disabled;
+  #  rice = enabled;
+  #};
 
   programs = {
     zsh.enable = true;
