@@ -21,7 +21,6 @@ in {
     hardware = {
       audio = enabled;
       networking = enabled;
-      nvidia = disabled;
     };
 
     system = {
