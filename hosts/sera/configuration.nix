@@ -12,7 +12,7 @@
   boot = {
     kernelModules = ["v4l2loopback"]; # Autostart kernel modules on boot
     extraModulePackages = with config.boot.kernelPackages; [v4l2loopback]; # loopback module to make OBS virtual camera work
-    kernelParams = ["nvidia.NVreg_PreserveVideoMemoryAllocations=1"];
+    #kernelParams = ["nvidia.NVreg_PreserveVideoMemoryAllocations=1"];
     supportedFilesystems = ["ntfs"];
     loader = {
       timeout = 10;
@@ -33,33 +33,38 @@
             repo = "minegrub-theme";
             rev = "193b3a7c3d432f8c6af10adfb465b781091f56b3";
             sha256 = "1bvkfmjzbk7pfisvmyw5gjmcqj9dab7gwd5nmvi8gs4vk72bl2ap";
+
+            #owner = "AdisonCavani";
+            #repo = "distro-grub-themes";
+            #rev = "v3.1";
+            #hash = "sha256-ZcoGbbOMDDwjLhsvs77C7G7vINQnprdfI37a9ccrmPs=";  
           };
       };
     };
   };
 
   hardware = {
-    nvidia = {
-      open = false;
-      nvidiaSettings = true;
-      powerManagement.enable = true;
-      modesetting.enable = true;
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
-    };
-    opengl = {
-      enable = true;
-      driSupport32Bit = true;
-      extraPackages = with pkgs; [nvidia-vaapi-driver];
-    };
+    #nvidia = {
+    #  open = false;
+    #  nvidiaSettings = true;
+    #  powerManagement.enable = true;
+    #  modesetting.enable = true;
+    #  package = config.boot.kernelPackages.nvidiaPackages.stable;
+    #};
+    #opengl = {
+    #  enable = true;
+    #  driSupport32Bit = true;
+    #  extraPackages = with pkgs; [nvidia-vaapi-driver];
+    #};
   };
 
   environment = {
     variables = {
       EDITOR = "nvim";
-      GBM_BACKEND = "nvidia-drm";
-      LIBVA_DRIVER_NAME = "nvidia";
-      __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-      __GL_GSYNC_ALLOWED = "1";
+      #GBM_BACKEND = "nvidia-drm";
+      #LIBVA_DRIVER_NAME = "nvidia";
+      #__GLX_VENDOR_LIBRARY_NAME = "nvidia";
+      #__GL_GSYNC_ALLOWED = "1";
       __GL_VRR_ALLOWED = "0"; # Controls if Adaptive Sync should be used. Recommended to set as “0” to avoid having problems on some games.
       XCURSOR_THEME = "macOS-BigSur";
       XCURSOR_SIZE = "32";
@@ -77,7 +82,7 @@
   };
 
   # Configure console keymap
-  console = {keyMap = "br-abnt2";};
+  console = {keyMap = "de-latin1";};
 
   networking = {
     networkmanager.enable = true;
@@ -219,16 +224,16 @@
     };
   };
 
-  # suites = {
-  #   common = enabled;
-  #   desktop = enabled;
-  #   development = enabled;
-  #   music = enabled;
-  #   video = enabled;
-  #   social = enabled;
-  #   gaming = disabled;
-  #   rice = enabled;
-  # };
+  suites = {
+    common = enabled;
+    desktop = enabled;
+    development = enabled;
+    music = enabled;
+    video = enabled;
+    social = enabled;
+    gaming = disabled;
+    rice = enabled;
+  };
 
   programs = {
     zsh.enable = true;
@@ -282,9 +287,9 @@
       };
       xkb = {
         variant = "";
-        layout = "br";
+        layout = "at";
       };
-      videoDrivers = ["nvidia"];
+      #videoDrivers = ["nvidia"];
     };
     logmein-hamachi.enable = false;
     flatpak.enable = false;
@@ -296,5 +301,5 @@
     inputs.xdg-portal-hyprland.packages.${system}.xdg-desktop-portal-hyprland
   ];
 
-  system.stateVersion = "22.11"; # Did you read the comment?
+  system.stateVersion = "23.11"; # Did you read the comment?
 }
