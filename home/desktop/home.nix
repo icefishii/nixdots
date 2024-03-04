@@ -20,7 +20,7 @@
     # ./services
     # ./suites
     ./system
-    ./themes
+    #./themes
     ./tools
     ./user
     #./virtualization
