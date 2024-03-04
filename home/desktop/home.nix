@@ -2,7 +2,7 @@
   home = {
     username = "sera";
     homeDirectory = "/home/sera";
-    stateVersion = "23.11";
+    stateVersion = "22.11";
   };
 
   # Let Home Manager install and manage itself.
@@ -20,10 +20,10 @@
     # ./services
     # ./suites
     ./system
-    # ./themes
+    ./themes
     ./tools
     ./user
-    ./virtualization
+    #./virtualization
   ];
 
   # Allow unfree packages + use overlays

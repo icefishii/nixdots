@@ -301,5 +301,5 @@
     inputs.xdg-portal-hyprland.packages.${system}.xdg-desktop-portal-hyprland
   ];
 
-  system.stateVersion = "23.11"; # Did you read the comment?
+  system.stateVersion = "22.11"; # Did you read the comment?
 }

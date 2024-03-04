@@ -43,7 +43,7 @@ in {
         go = enabled;
         java = enabled;
         rust = enabled;
-        python = enabled;
+        python = disabled;
         sql = enabled;
         javascript = enabled;
         lua = enabled;
@@ -51,7 +51,7 @@ in {
       };
     };
     virtualization = {
-      kvm = enabled;
+      kvm = disabled;
     };
   };
 }

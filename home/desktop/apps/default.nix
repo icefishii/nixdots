@@ -3,12 +3,12 @@ _: {
     ./artix-game-launcher
     # ./brave
     ./discord
-    ./davinci-resolve
+    #./davinci-resolve
     ./firefox
     ./floorp
     ./insomnia
     ./misc
-    ./obs
+    #./obs
     ./spicetify
     # ./steam
   ];
